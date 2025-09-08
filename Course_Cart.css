@@ -1,0 +1,22 @@
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(90deg, #4a6cf7, #8a56f7);
+  padding: 60px 20px;
+}
+
+/* Cart Section */
+.course-img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.summary-box {
+  background: #f9f9f9;
+}
+
+/* Footer */
+.footer-section {
+  background: linear-gradient(90deg, #4a6cf7, #8a56f7);
+}
