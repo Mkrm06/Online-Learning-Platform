@@ -1,22 +1,98 @@
-/* Hero Section */
-.hero-section {
-  background: linear-gradient(90deg, #4a6cf7, #8a56f7);
-  padding: 60px 20px;
+/* Header (Navbar) */
+.header-section {
+  background: #fff;
+  height: 119px; /* match Figma height */
+  display: flex;
+  align-items: center;
 }
 
-/* Cart Section */
+/* Logo */
+.logo-img {
+  width: 226px;   /* match Figma width */
+  height: 121px;  /* match Figma height */
+  object-fit: contain;
+}
+.logo-text {
+  font-weight: bold;
+  font-size: 36px;   /* scale up text to match big logo */
+  color: #ff7b54;
+  line-height: 1;
+}
+.logo-text span {
+  color: #4a6cf7;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(90deg, #4a6cf7, #8a56f7); /* Blue gradient like Figma */
+  width: 100%;
+  height: 462px; /* match Figma height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.hero-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-text h1 {
+  font-size: 56px; /* Figma style big heading */
+  font-weight: bold;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.hero-img img {
+  width: 488px;       /* match Figma width */
+  height: 500px;      /* match Figma height */
+  object-fit: contain;
+  transform: rotate(0deg); /* flip horizontally */
+}
+
+
+
+/* Cart */
 .course-img {
   width: 80px;
   height: 60px;
   object-fit: cover;
   border-radius: 8px;
 }
-
 .summary-box {
   background: #f9f9f9;
+}
+
+/* Payment Modal Blur */
+.modal-backdrop.show {
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 /* Footer */
 .footer-section {
   background: linear-gradient(90deg, #4a6cf7, #8a56f7);
+}
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-link:hover {
+  text-decoration: underline;
+}
+.footer-section i {
+  font-size: 18px;
+  color: #fff;
 }
