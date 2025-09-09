@@ -68,31 +68,203 @@ body{
   font-weight:600;
 }
 
-/* Circular checkbox (custom) */
-.custom-radio{
-  appearance:none;
-  width:20px;
-  height:20px;
-  border-radius:50%;
-  border:2px solid #1e3a8a;
-  background:transparent;
-  cursor:pointer;
-  transition:all .2s ease-in-out;
-}
-.custom-radio:checked{
-  background:#1e3a8a;
-  border-color:#1e3a8a;
+.custom-radio {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #1e3a8a;
+  background: transparent;
+  cursor: pointer;
+  box-sizing: border-box; /* ensures border fits correctly */
+  margin: 0; /* remove default spacing */
+  padding: 0;
+  vertical-align: middle;
+  transition: all 0.2s ease-in-out;
 }
 
-/* Summary */
-.cart-summary{
-  background:var(--summary-bg);
-  border-radius:12px;
+.custom-radio:checked {
+  background: #1e3a8a;
+  border-color: #1e3a8a;
 }
-.cart-summary .btn-primary{
-  background:#4a00ff;
-  border:none;
+
+/* Global Font */
+body {
+  font-family: 'Poppins', sans-serif;
 }
+/* Cart Summary Box */
+.cart-summary {
+  background: #2C79E04D;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-family: "Poppins", sans-serif;
+  max-width: 350px;
+  margin: auto;
+}
+
+/* Title */
+.summary-title {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #0A2A7A;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 18px;
+}
+
+/* Totals List */
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 14px;
+  color: #050472;
+}
+
+.summary-divider {
+  border-top: 1px solid #8B8B8B;
+  margin: 1 rem 0;
+}
+
+
+
+.summary-item.total {
+  font-weight: 700;
+  font-size: 16px;
+  color: #0A2A7A;
+}
+
+/* Voucher Row */
+.voucher-row {
+  display: flex;
+  margin: 14px 0;
+  gap: 8px;
+}
+
+.voucher-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.btn-apply {
+  background: #8B8B8B;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-apply:hover {
+  background: #8B8B8B;
+}
+
+/* Buttons Row (Add + Empty) */
+.summary-buttons-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.btn-add-course{
+  flex: 1;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px; /* same as Apply button */
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.btn-empty {
+  flex: 1;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px; /* same as Apply button */
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Add Courses+ */
+.btn-add-course {
+  background: #0A2A7A;
+  color: #fff;
+}
+
+.btn-add-course .plus-circle {
+  background: #0A2A7A;
+  color: #fff;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  width: 18px;
+  height: 18px;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Empty Cart */
+.btn-empty {
+  background: none;
+  color: #555;
+  border-color: #8B8B8B;
+  color: #8B8B8B;
+  border: 2px solid #8B8B8B;
+}
+
+.btn-empty:hover {
+  background: #2C79E04D;
+}
+
+/* Checkout Button */
+.summary-checkout {
+  text-align: center; /* centers the button */
+  margin-top: 1.5rem;
+}
+
+.btn-checkout {
+  display: inline-block;       /* only as wide as its content */
+  background: #fff;
+  color: #0A2A7A;
+  border: 2px solid #0A2A7A;
+  border-radius: 30px;
+  padding: 12px 40px;          /* extra width for nice pill shape */
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-checkout:hover {
+  background: #0A2A7A;
+  color: #fff;
+}
+
 
 /* Modal */
 .modal-backdrop.show{
@@ -105,27 +277,72 @@ body{
 }
 
 /* Footer */
-.footer-section{
-  background: linear-gradient(90deg, var(--brand-start), var(--brand-end));
-}
-.footer-link{
-  color:#fff;
-  text-decoration:none;
-}
-.footer-link:hover{
-  text-decoration:underline;
-}
-.footer-section i{
-  font-size:18px;
-  color:#fff;
+.footer-section {
+  background: linear-gradient(90deg, #4a6cf7, #8a56f7);
+  color: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: 40px;
 }
 
-/* Responsive tweaks */
-@media (max-width: 767.98px){
-  .hero-section{
-    padding:40px 0;
-  }
-  .hero-section h1{
-    font-size:34px;
-  }
+.footer-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.footer-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-left: 12px;
+  color: #fff;
+  font-size: 18px;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.footer-social a:hover {
+  transform: scale(1.2);
+  color: #ffdf5e; /* yellow highlight */
+}
+
+.remove-btn {
+  color: #050472; /* Text color */
+  border: 2px solid #050472; /* Border color */
+  background-color: transparent; /* Keep it outline style */
+  border-radius: 4px; /* Optional: rounded corners */
+  padding: 5px 10px; /* Adjust padding */
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #050472; /* Blue background on hover */
+  color: #fff; /* White text on hover */
 }

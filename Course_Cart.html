@@ -140,42 +140,57 @@
           </div>
         </div>
 
-        <!-- Right: summary -->
-        <div class="col-lg-4">
-          <aside class="cart-summary p-4 rounded-3">
-            <h6 class="fw-bold text-uppercase mb-3">Cart Summary</h6>
+        <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-            <div class="d-flex justify-content-between small mb-2">
-              <span>Items Total</span>
-              <span id="itemsTotal">$0.00</span>
-            </div>
-            <div class="d-flex justify-content-between small mb-3">
-              <span>Items Discount</span>
-              <span id="itemsDiscount">$0.00</span>
-            </div>
+<!-- Cart Summary -->
+<div class="cart-summary">
+  <h3 class="summary-title">CART SUMMARY</h3>
 
-            <div class="input-group mb-3">
-              <input id="voucherInput" type="text" class="form-control" placeholder="Enter Voucher Code">
-              <button id="applyVoucher" class="btn btn-dark">Apply</button>
-            </div>
+  <div class="summary-details">
+    <p class="summary-item">
+      <span>Items Total</span>
+      <span>$67.98</span>
+    </p>
+    <p class="summary-item">
+      <span>Items Discount</span>
+      <span>$0</span>
+    </p>
 
-            <div class="d-flex justify-content-between small mb-2">
-              <span>Sub Total</span>
-              <span id="subTotal">$0.00</span>
-            </div>
-            <div class="d-flex justify-content-between fw-semibold mb-4">
-              <span>Total</span>
-              <span id="grandTotal">$0.00</span>
-            </div>
+    <!-- Voucher Row -->
+    <div class="voucher-row">
+      <input type="text" class="voucher-input" placeholder="Enter Voucher Code">
+      <button class="btn-apply">APPLY</button>
+    </div>
 
-            <div class="d-grid gap-2 mb-3">
-              <button id="addCourses" class="btn btn-outline-primary">Add Courses</button>
-              <button id="emptyCart" class="btn btn-outline-danger">Empty Cart</button>
-            </div>
+    <p class="summary-item">
+      <span>Sub Total</span>
+      <span>$67.98</span>
+    </p>
 
-            <button id="checkoutBtn" class="btn btn-primary w-100">Check Out</button>
-          </aside>
-        </div>
+    <div class="summary-divider"></div>
+
+
+    <p class="summary-item total">
+      <span>Total</span>
+      <span>$67.98</span>
+    </p>
+  </div>
+
+  <!-- Buttons Row -->
+  <div class="summary-buttons-row">
+    <button class="btn-add-course">
+      Add Courses <span class="plus-circle">+</span>
+    </button>
+    <button class="btn-empty">Empty Cart</button>
+  </div>
+
+  <!-- Checkout Button -->
+  <div class="summary-checkout">
+    <button class="btn-checkout">Check Out</button>
+  </div>
+</div>
+
       </div>
     </div>
   </main>
@@ -216,40 +231,58 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="footer-section text-white mt-5">
-    <div class="container py-5">
-      <div class="row gy-4">
-        <div class="col-md-4">
-          <div class="d-flex align-items-center mb-2">
-            <img src="images/1 1957762.png" alt="Mastery Hub" class="logo-img me-2">
-          </div>
-          <p class="mb-0">Venam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<!-- Footer -->
+<footer class="footer-section text-white">
+  <div class="container py-5">
+    <div class="row align-items-start">
+      <!-- About -->
+      <div class="col-md-4 mb-4">
+        <div class="d-flex align-items-center mb-3">
+          <img src="images/1 1957762.png" alt="Logo" class="footer-logo me-2">
+          <h4 class="mb-0 fw-bold">MASTERY <span>HUB</span></h4>
         </div>
-        <div class="col-md-4">
-          <h5 class="fw-bold mb-3">Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="#" class="footer-link">About</a></li>
-            <li><a href="#" class="footer-link">Course</a></li>
-            <li><a href="#" class="footer-link">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5 class="fw-bold mb-3">Contact Us</h5>
-          <p class="mb-1"><i class="fa-solid fa-phone me-2"></i>071 555-0104</p>
-          <p class="mb-0"><i class="fa-regular fa-envelope me-2"></i>masteryhub@gmail.com</p>
-        </div>
+        <p class="footer-desc">
+          Venam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
       </div>
-      <div class="text-center mt-4">
-        <a href="#" class="me-3 text-white"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="me-3 text-white"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="me-3 text-white"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="text-white"><i class="fab fa-behance"></i></a>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4 text-center">
+        <h5 class="fw-bold mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">About</a></li>
+          <li><a href="#" class="footer-link">Course</a></li>
+          <li><a href="#" class="footer-link">Contact</a></li>
+        </ul>
       </div>
-      <p class="mt-3 mb-0 small text-center">&copy; 2023 | All Rights Reserved</p>
+
+      <!-- Contact -->
+      <div class="col-md-4 mb-4 text-md-end">
+        <h5 class="fw-bold mb-3">Contact Us</h5>
+        <p><i class="fa fa-phone me-2"></i>071 555-0104</p>
+        <p><i class="fa fa-envelope me-2"></i>masteryhub@gmail.com</p>
+      </div>
     </div>
-  </footer>
-<!-- Bootstrap & Your JS -->
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom d-flex justify-content-between align-items-center px-4 py-3">
+    <!-- Left: Copyright -->
+    <p class="mb-0">&copy; 2023 | All Rights Reserved</p>
+
+    <!-- Right: Social Icons -->
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-behance"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+
   <!-- Bootstrap & Your JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="Course_Cart.js"></script>
