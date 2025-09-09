@@ -1,98 +1,131 @@
-/* Header (Navbar) */
-.header-section {
-  background: #fff;
-  height: 119px; /* match Figma height */
-  display: flex;
-  align-items: center;
+/* Global */
+:root{
+  --brand-start:#4664ff;
+  --brand-end:#8a56f7;
+  --summary-bg:#d9e7ff;
+  --grey-card:#e5e5e5;
+}
+*{ box-sizing:border-box; }
+body{
+  font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;
+  background:#f7faff;
+  color:#111;
 }
 
-/* Logo */
-.logo-img {
-  width: 226px;   /* match Figma width */
-  height: 121px;  /* match Figma height */
-  object-fit: contain;
+/* Header */
+.header-section{
+  background:#fff;
+  border-bottom:1px solid #f0f0f0;
 }
-.logo-text {
-  font-weight: bold;
-  font-size: 36px;   /* scale up text to match big logo */
-  color: #ff7b54;
-  line-height: 1;
+.logo-img{
+  width:160px;
+  height:auto;
+  object-fit:contain;
 }
-.logo-text span {
-  color: #4a6cf7;
+.header-section .nav-link{
+  color:#111;
 }
-
-/* Hero Section */
-.hero-section {
-  background: linear-gradient(90deg, #4a6cf7, #8a56f7); /* Blue gradient like Figma */
-  width: 100%;
-  height: 462px; /* match Figma height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+.header-section .nav-link:hover{
+  color:#4664ff;
 }
 
-.hero-section .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+/* Hero */
+.hero-section{
+  background: linear-gradient(90deg, var(--brand-start), var(--brand-end));
+  color:#fff;
+  padding:64px 0;
+  border-bottom-left-radius:30px;
+  border-bottom-right-radius:30px;
+}
+.hero-section h1{
+  font-size:42px;
+}
+.hero-img img{
+  width:480px;
+  max-width:100%;
+  height:auto;
 }
 
-.hero-text h1 {
-  font-size: 56px; /* Figma style big heading */
-  font-weight: bold;
+/* Cart items */
+.cart-item{
+  background:var(--grey-card);
+  border:none;
+  border-radius:12px;
+}
+.course-img{
+  width:110px;
+  height:80px;
+  border-radius:10px;
+  object-fit:cover;
+  background:#ddd;
+}
+.item-title{
+  font-size:16px;
+  font-weight:600;
+}
+.item-price{
+  font-size:15px;
+  font-weight:600;
 }
 
-.hero-text p {
-  font-size: 18px;
-  margin-top: 10px;
+/* Circular checkbox (custom) */
+.custom-radio{
+  appearance:none;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  border:2px solid #1e3a8a;
+  background:transparent;
+  cursor:pointer;
+  transition:all .2s ease-in-out;
+}
+.custom-radio:checked{
+  background:#1e3a8a;
+  border-color:#1e3a8a;
 }
 
-.hero-img img {
-  width: 488px;       /* match Figma width */
-  height: 500px;      /* match Figma height */
-  object-fit: contain;
-  transform: rotate(0deg); /* flip horizontally */
+/* Summary */
+.cart-summary{
+  background:var(--summary-bg);
+  border-radius:12px;
+}
+.cart-summary .btn-primary{
+  background:#4a00ff;
+  border:none;
 }
 
-
-
-/* Cart */
-.course-img {
-  width: 80px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-.summary-box {
-  background: #f9f9f9;
-}
-
-/* Payment Modal Blur */
-.modal-backdrop.show {
+/* Modal */
+.modal-backdrop.show{
   backdrop-filter: blur(6px);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0,0,0,.4);
 }
-.modal-content {
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+.modal-content{
+  border-radius:16px;
+  box-shadow:0 8px 20px rgba(0,0,0,.2);
 }
 
 /* Footer */
-.footer-section {
-  background: linear-gradient(90deg, #4a6cf7, #8a56f7);
+.footer-section{
+  background: linear-gradient(90deg, var(--brand-start), var(--brand-end));
 }
-.footer-link {
-  color: #fff;
-  text-decoration: none;
+.footer-link{
+  color:#fff;
+  text-decoration:none;
 }
-.footer-link:hover {
-  text-decoration: underline;
+.footer-link:hover{
+  text-decoration:underline;
 }
-.footer-section i {
-  font-size: 18px;
-  color: #fff;
+.footer-section i{
+  font-size:18px;
+  color:#fff;
+}
+
+/* Responsive tweaks */
+@media (max-width: 767.98px){
+  .hero-section{
+    padding:40px 0;
+  }
+  .hero-section h1{
+    font-size:34px;
+  }
 }

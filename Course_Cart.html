@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Course Cart - Mastery Hub</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Your CSS -->
   <link rel="stylesheet" href="Course_Cart.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -14,23 +23,25 @@
   <header class="header-section">
     <div class="container d-flex justify-content-between align-items-center py-3">
       <!-- Logo -->
-      <div class="d-flex align-items-center">
-        <img src="images/2 717.png" alt="Logo" class="logo-img me-2">
-      
-      </div>
+      <a href="#" class="d-flex align-items-center text-decoration-none">
+        <!-- rename files to avoid spaces, e.g., images/logo.png -->
+        <img src="images/2 717.png" alt="Mastery Hub" class="logo-img me-2">
+      </a>
+
       <!-- Navigation -->
       <nav>
-        <ul class="nav">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
+        <ul class="nav fw-medium">
+          <li class="nav-item"><a class="nav-link px-3" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#">Courses</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#">Shop</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#">Pages</a></li>
         </ul>
       </nav>
+
       <!-- Icons -->
       <div class="icons">
-        <i class="fa fa-user me-3"></i>
-        <i class="fa fa-shopping-cart"></i>
+        <a class="text-dark me-3" href="#"><i class="fa-regular fa-user"></i></a>
+        <a class="text-dark" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
       </div>
     </div>
   </header>
@@ -39,101 +50,165 @@
   <section class="hero-section text-white">
     <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between">
       <div class="text-center text-lg-start mb-4 mb-lg-0">
-        <h1 class="fw-bold">Course Cart</h1>
-        <p>Review your courses before checkout.</p>
+        <h1 class="fw-bold mb-2">Course cart</h1>
+        <p class="mb-0">Review your courses before checkout.</p>
       </div>
-      <!-- Hero image -->
       <div class="hero-img">
-        <img src="images/girl-student 1.png" alt="Cart Image" class="img-fluid">
+        <!-- replace with your figma hero image -->
+        <img src="images/girl-student 1.png" alt="Cart" class="img-fluid">
       </div>
     </div>
   </section>
 
-  <!-- Cart Section -->
-  <section class="cart-section container my-5">
-    <div class="row">
-      <!-- Cart Items -->
-      <div class="col-lg-8">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <span class="fw-bold">Select all items</span>
-          <input type="checkbox" id="selectAll">
-        </div>
+  <!-- Main -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Left: items -->
+        <div class="col-lg-8">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="fw-semibold">Select all Items</span>
+            <input type="checkbox" id="selectAll" class="form-check-input custom-radio">
+          </div>
 
-        <!-- Course Item -->
-        <div class="card mb-3 cart-item">
-          <div class="card-body d-flex align-items-center">
-            <img src="placeholder-course.png" class="course-img me-3" alt="Course Image">
-            <div class="flex-grow-1">
-              <h6>Motion Graphics: Create a Nice Typography Animation</h6>
-              <p class="fw-bold">$33.99</p>
+          <!-- Item 1 -->
+          <div class="card mb-3 cart-item" data-price="33.99">
+            <div class="card-body d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                <img src="images/Frame 1 .png" class="course-img me-3" alt="Course">
+                <div>
+                  <h6 class="item-title mb-1">Motion Graphics: Create a Nice Typography Animation</h6>
+                  <p class="item-price mb-0">$33.99</p>
+                </div>
+              </div>
+              <div class="d-flex flex-column align-items-end">
+                <input type="checkbox" class="form-check-input custom-radio mb-2 item-check" checked>
+                <button class="btn btn-outline-danger btn-sm remove-btn">Remove</button>
+              </div>
             </div>
-            <button class="btn btn-outline-danger btn-sm">Remove</button>
           </div>
-        </div>
 
-        <div class="card mb-3 cart-item">
-          <div class="card-body d-flex align-items-center">
-            <img src="placeholder-course.png" class="course-img me-3" alt="Course Image">
-            <div class="flex-grow-1">
-              <h6>Motion Graphics: Create a Nice Typography Animation</h6>
-              <p class="fw-bold">$33.99</p>
+          <!-- Item 2 -->
+          <div class="card mb-3 cart-item" data-price="33.99">
+            <div class="card-body d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                <img src="images/Frame 1 .png" class="course-img me-3" alt="Course">
+                <div>
+                  <h6 class="item-title mb-1">Motion Graphics: Create a Nice Typography Animation</h6>
+                  <p class="item-price mb-0">$33.99</p>
+                </div>
+              </div>
+              <div class="d-flex flex-column align-items-end">
+                <input type="checkbox" class="form-check-input custom-radio mb-2 item-check" checked>
+                <button class="btn btn-outline-danger btn-sm remove-btn">Remove</button>
+              </div>
             </div>
-            <button class="btn btn-outline-danger btn-sm">Remove</button>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="card mb-3 cart-item" data-price="33.99">
+            <div class="card-body d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                <img src="images/Frame 1 .png" class="course-img me-3" alt="Course">
+                <div>
+                  <h6 class="item-title mb-1">Motion Graphics: Create a Nice Typography Animation</h6>
+                  <p class="item-price mb-0">$33.99</p>
+                </div>
+              </div>
+              <div class="d-flex flex-column align-items-end">
+                <input type="checkbox" class="form-check-input custom-radio mb-2 item-check" checked>
+                <button class="btn btn-outline-danger btn-sm remove-btn">Remove</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="card mb-3 cart-item" data-price="33.99">
+            <div class="card-body d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                <img src="images/Frame 1 .png" class="course-img me-3" alt="Course">
+                <div>
+                  <h6 class="item-title mb-1">Motion Graphics: Create a Nice Typography Animation</h6>
+                  <p class="item-price mb-0">$33.99</p>
+                </div>
+              </div>
+              <div class="d-flex flex-column align-items-end">
+                <input type="checkbox" class="form-check-input custom-radio mb-2 item-check" checked>
+                <button class="btn btn-outline-danger btn-sm remove-btn">Remove</button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Cart Summary -->
-      <div class="col-lg-4">
-        <div class="summary-box p-4 rounded shadow-sm">
-          <h5 class="fw-bold mb-3">Cart Summary</h5>
-          <div class="d-flex justify-content-between">
-            <span>Items Total</span>
-            <span>$67.98</span>
-          </div>
-          <div class="d-flex justify-content-between">
-            <span>Items Discount</span>
-            <span>$0</span>
-          </div>
-          <input type="text" class="form-control my-2" placeholder="Enter Voucher Code">
-          <button class="btn btn-primary w-100 mb-3">Apply</button>
-          <div class="d-flex justify-content-between fw-bold">
-            <span>Total</span>
-            <span>$67.98</span>
-          </div>
-          <button id="checkoutBtn" class="btn btn-dark w-100 mt-3">Check Out</button>
+        <!-- Right: summary -->
+        <div class="col-lg-4">
+          <aside class="cart-summary p-4 rounded-3">
+            <h6 class="fw-bold text-uppercase mb-3">Cart Summary</h6>
+
+            <div class="d-flex justify-content-between small mb-2">
+              <span>Items Total</span>
+              <span id="itemsTotal">$0.00</span>
+            </div>
+            <div class="d-flex justify-content-between small mb-3">
+              <span>Items Discount</span>
+              <span id="itemsDiscount">$0.00</span>
+            </div>
+
+            <div class="input-group mb-3">
+              <input id="voucherInput" type="text" class="form-control" placeholder="Enter Voucher Code">
+              <button id="applyVoucher" class="btn btn-dark">Apply</button>
+            </div>
+
+            <div class="d-flex justify-content-between small mb-2">
+              <span>Sub Total</span>
+              <span id="subTotal">$0.00</span>
+            </div>
+            <div class="d-flex justify-content-between fw-semibold mb-4">
+              <span>Total</span>
+              <span id="grandTotal">$0.00</span>
+            </div>
+
+            <div class="d-grid gap-2 mb-3">
+              <button id="addCourses" class="btn btn-outline-primary">Add Courses</button>
+              <button id="emptyCart" class="btn btn-outline-danger">Empty Cart</button>
+            </div>
+
+            <button id="checkoutBtn" class="btn btn-primary w-100">Check Out</button>
+          </aside>
         </div>
       </div>
     </div>
-  </section>
+  </main>
 
-  <!-- Payment Popup -->
-  <div class="modal fade" id="paymentModal" tabindex="-1">
+  <!-- Payment Modal -->
+  <div class="modal fade" id="paymentModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content p-4 rounded-4">
         <h4 class="fw-bold mb-3">Pay via Credit / Debit Card</h4>
-        <form>
+        <form id="paymentForm">
           <div class="mb-3">
             <label class="form-label">Card Holder's Name</label>
-            <input type="text" class="form-control" placeholder="Card Holder's Name">
+            <input type="text" class="form-control" placeholder="Card Holder's Name" required>
           </div>
           <div class="mb-3">
             <label class="form-label">Card Number</label>
-            <input type="text" class="form-control" placeholder="Card Number">
+            <input type="text" class="form-control" placeholder="Card Number" inputmode="numeric" minlength="12" maxlength="19" required>
           </div>
           <div class="row">
             <div class="col-md-6 mb-3">
               <label class="form-label">Expire Date</label>
-              <input type="text" class="form-control" placeholder="MM/YY">
+              <input type="text" class="form-control" placeholder="MM/YY" required>
             </div>
             <div class="col-md-6 mb-3">
               <label class="form-label">CVV</label>
-              <input type="text" class="form-control" placeholder="CVV">
+              <input type="password" class="form-control" placeholder="CVV" inputmode="numeric" minlength="3" maxlength="4" required>
             </div>
           </div>
           <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="termsCheck">
-            <label class="form-check-label" for="termsCheck">I accept the <a href="#">Terms and Conditions</a></label>
+            <input class="form-check-input" type="checkbox" id="termsCheck" required>
+            <label class="form-check-label" for="termsCheck">
+              I accept the <a href="#" class="link-dark">Terms and Conditions</a>
+            </label>
           </div>
           <button type="submit" class="btn btn-dark w-100">Place Order</button>
         </form>
@@ -142,19 +217,16 @@
   </div>
 
   <!-- Footer -->
-  <footer class="footer-section text-white">
+  <footer class="footer-section text-white mt-5">
     <div class="container py-5">
-      <div class="row">
-        <!-- About -->
-        <div class="col-md-4 mb-4">
+      <div class="row gy-4">
+        <div class="col-md-4">
           <div class="d-flex align-items-center mb-2">
-            <img src="images/1 1957762.png" alt="Logo" class="logo-img me-2">
-            
+            <img src="images/1 1957762.png" alt="Mastery Hub" class="logo-img me-2">
           </div>
-          <p>Venam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+          <p class="mb-0">Venam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-        <!-- Quick Links -->
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4">
           <h5 class="fw-bold mb-3">Quick Links</h5>
           <ul class="list-unstyled">
             <li><a href="#" class="footer-link">About</a></li>
@@ -162,25 +234,24 @@
             <li><a href="#" class="footer-link">Contact</a></li>
           </ul>
         </div>
-        <!-- Contact -->
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4">
           <h5 class="fw-bold mb-3">Contact Us</h5>
-          <p><i class="fa fa-phone me-2"></i>071 555-0104</p>
-          <p><i class="fa fa-envelope me-2"></i>masteryhub@gmail.com</p>
+          <p class="mb-1"><i class="fa-solid fa-phone me-2"></i>071 555-0104</p>
+          <p class="mb-0"><i class="fa-regular fa-envelope me-2"></i>masteryhub@gmail.com</p>
         </div>
       </div>
-      <!-- Social Icons -->
       <div class="text-center mt-4">
-        <a href="#" class="me-3"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-behance"></i></a>
+        <a href="#" class="me-3 text-white"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="me-3 text-white"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="me-3 text-white"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-behance"></i></a>
       </div>
-      <p class="mt-3">&copy; 2023 | All Rights Reserved</p>
+      <p class="mt-3 mb-0 small text-center">&copy; 2023 | All Rights Reserved</p>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap & Your JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="Course_Cart.js"></script>
 </body>
 </html>
