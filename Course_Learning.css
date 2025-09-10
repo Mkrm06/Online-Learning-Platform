@@ -1,0 +1,19 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+#controls button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-group-item.active {
+  background: linear-gradient(90deg, #6c2be8, #7b3cf3);
+  border: none;
+  color: #fff;
+}
+
+footer {
+  background: linear-gradient(90deg, #6c2be8, #7b3cf3);
+}
