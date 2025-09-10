@@ -79,7 +79,7 @@ if (applyVoucher) {
 
     if (code === "MASTER10") discount = total * 0.10;
     else if (code === "MASTER20") discount = total * 0.20;
-    else if (code) alert("Invalid voucher. Try MASTER10 or MASTER20");
+    else if (code) alert("Invalid voucher. Try a Valid voucher");
 
     recalc();
   });

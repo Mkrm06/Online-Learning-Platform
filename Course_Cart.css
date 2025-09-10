@@ -59,36 +59,45 @@ body{
   object-fit:cover;
   background:#ddd;
 }
-.item-title{
-  font-size:16px;
-  font-weight:600;
+.item-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #000;
+
+  white-space: normal;
+  word-break: break-word;
+
+  /* Adjust width until text breaks into exactly 2 lines like Figma */
+  max-width: 280px; 
 }
+
 .item-price{
   font-size:15px;
   font-weight:600;
 }
 
+/* Circular checkbox */
 .custom-radio {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  display: inline-block;
+
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid #1e3a8a;
-  background: transparent;
+  border: 2px solid #050472;
+  background: #fff;
   cursor: pointer;
-  box-sizing: border-box; /* ensures border fits correctly */
-  margin: 0; /* remove default spacing */
-  padding: 0;
-  vertical-align: middle;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
+  display: inline-block;
+  position: relative;
 }
 
+/* Checked state - solid circle */
 .custom-radio:checked {
-  background: #1e3a8a;
-  border-color: #1e3a8a;
+  background-color: #050472; /* solid fill */
+  border-color: #050472;     /* border same color */
 }
 
 /* Global Font */
@@ -152,6 +161,14 @@ body {
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 14px;
+}
+/* Voucher Label */
+.voucher-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0A2A7A;
+  margin-bottom: 6px;
+  display: block;
 }
 
 .btn-apply {
