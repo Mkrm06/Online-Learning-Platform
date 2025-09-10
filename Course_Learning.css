@@ -1,19 +1,232 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+.navbar {
+  background-color: #fff;
+  padding: 12px 40px;
+}
 
-#controls button {
+.navbar-brand img {
+  height: 80px;
+}
+
+.nav-link {
+  color: #333;
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+.nav-link:hover {
+  color: #331DAB;
+}
+
+.search-box {
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 5px 15px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  width: 500px;
+  max-width: 100%;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.search-box i {
+  color: #666;
+  cursor: pointer;
+}
+
+.signup-btn {
+  background: linear-gradient(90deg, #331DAB, #865AEF);
+  border: none;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.signup-btn:hover {
+  opacity: 0.9;
+}
+
+.icon-btn {
+  color: #333;
+  margin: 0 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.icon-btn:hover {
+  color: #331DAB;
+}
+
+/* 📱 Mobile adjustments */
+@media (max-width: 991px) {
+  .search-box {
+    width: 100%;   /* full width inside dropdown */
+    margin: 10px 0;
+  }
 }
 
 .list-group-item.active {
-  background: linear-gradient(90deg, #6c2be8, #7b3cf3);
+  background: linear-gradient(90deg, #331DAB, #865AEF);
   border: none;
   color: #fff;
 }
 
-footer {
-  background: linear-gradient(90deg, #6c2be8, #7b3cf3);
+/* ==============================
+   📌 LESSON SIDEBAR (Right Column)
+   ============================== */
+.lesson-sidebar {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+}
+
+.lesson-item {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.lesson-item:hover {
+  background: #f1f0ff;
+}
+
+.lesson-item.active {
+  background: linear-gradient(90deg, #331DAB, #865AEF);
+  color: #fff;
+}
+
+.lesson-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(90deg, #331DAB, #865AEF);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  margin-right: 12px;
+  font-size: 14px;
+}
+
+.lesson-item.active .lesson-number {
+  background: #fff;
+  color: #331DAB;
+}
+
+.lesson-title {
+  font-size: 14px;
+  font-weight: 500;
+  flex: 1;
+}
+
+/* 📌 Download Button */
+.download-btn {
+  background: linear-gradient(90deg, #331DAB, #865AEF);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  opacity: 0.9;
+}
+
+/* ==============================
+   📌 FOOTER
+   ============================== */
+.footer-section {
+  background: linear-gradient(90deg, #331DAB, #865AEF);
+  color: #fff;
+  margin-top: 20px;
+  padding: 20px 60px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-column.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column.about img {
+  margin-bottom: 10px;
+}
+
+.footer-logo {
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+}
+
+.footer-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 10px;
+  max-width: 300px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-top: 32px;
+  font-size: 15px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 05px;
+  padding-top: 05px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-left: 12px;
+  color: #fff;
+  font-size: 18px;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.footer-social a:hover {
+  transform: scale(1.2);
+  color: #ffdf5e; /* yellow highlight */
 }
