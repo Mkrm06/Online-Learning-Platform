@@ -1,0 +1,112 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  background-color: #fff;
+  padding: 12px 40px;
+}
+
+.navbar-brand img {
+  height: 60px;
+}
+
+.nav-link {
+  color: #333;
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+.nav-link:hover {
+  color: #331DAB;
+}
+
+/* Search bar styling */
+.search-box {
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  max-width: 100%;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.search-box i {
+  color: #666;
+  cursor: pointer;
+}
+
+/* Signup button gradient */
+.signup-btn {
+  background: linear-gradient(90deg, #331DAB, #865AEF);
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.signup-btn:hover {
+  opacity: 0.9;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url('Image/Header_Blog.png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(68, 0, 132, 0.7);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-top: 15px;
+}
+
+/* Blog cards */
+.card h6 {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(90deg, #4a00e0, #8e2de2);
+}
+
+.footer h4, .footer h5 {
+  margin-bottom: 15px;
+}
