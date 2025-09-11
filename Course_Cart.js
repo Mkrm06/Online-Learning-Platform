@@ -116,35 +116,32 @@ recalc();
 const addCourseBtn = document.querySelector(".btn-add-course");
 if (addCourseBtn) {
   addCourseBtn.addEventListener("click", () => {
-    // Create a new cart item
-    const newItem = document.createElement("div");
-    newItem.className = "card mb-3 cart-item";
-    newItem.dataset.price = "33.99"; // default price, you can change
+    const cartList = document.getElementById("cartList");
 
-    newItem.innerHTML = `
-      <div class="card-body d-flex align-items-center justify-content-between">
-        <div class="d-flex align-items-center">
-          <img src="images/Frame 1 .png" class="course-img me-3" alt="Course">
-          <div>
-            <h6 class="item-title mb-1">New Course Item</h6>
-            <p class="item-price mb-0">$33.99</p>
-          </div>
-        </div>
-        <div class="d-flex flex-column align-items-end">
-          <input type="checkbox" class="form-check-input custom-radio mb-2 item-check" checked>
-          <button class="btn btn-outline-danger btn-sm remove-btn">Remove</button>
-        </div>
-      </div>
-    `;
+    // Find the first cart item (our template)
+    const template = document.querySelector(".cart-item");
 
-    // Insert into cart (before summary column)
-    const cartList = document.querySelector(".col-lg-8");
-    cartList.appendChild(newItem);
+    if (template) {
+      // Clone it deeply (with children)
+      const newItem = template.cloneNode(true);
 
-    // Re-wire events for checkbox + remove button
-    wireItem(newItem);
+      // Update item title/price if needed
+      newItem.querySelector(".item-title").textContent = "Motion Graphics: Create a Nice Typography Animation";
+      newItem.querySelector(".item-price").textContent = "$33.99";
+      newItem.dataset.price = "33.99";
 
-    // Recalculate totals
-    recalc();
+      // Reset checkbox
+      const check = newItem.querySelector(".item-check");
+      if (check) check.checked = true;
+
+      // Append to cart
+      cartList.appendChild(newItem);
+
+      // Re-wire events for new checkbox + remove button
+      wireItem(newItem);
+
+      // Recalculate totals
+      recalc();
+    }
   });
 }

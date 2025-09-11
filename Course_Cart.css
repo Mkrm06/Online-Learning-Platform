@@ -79,25 +79,21 @@ body{
 
 /* Circular checkbox */
 .custom-radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50% !important; /* force round */
+  border: 2px solid #050472;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 2px solid #050472;
-  background: #fff;
+  outline: none;
   cursor: pointer;
-  transition: all 0.2s ease;
-  display: inline-block;
-  position: relative;
+  transition: 0.3s;
 }
 
-/* Checked state - solid circle */
 .custom-radio:checked {
-  background-color: #050472; /* solid fill */
-  border-color: #050472;     /* border same color */
+  background-color: #050472;  /* Blue fill */
+  border-color: #050472;
 }
 
 /* Global Font */

@@ -62,141 +62,69 @@
 
   <!-- Main -->
   <main class="py-5">
-    <div class="container">
-      <div class="row g-4">
-        <!-- Left: items -->
-        <div class="col-lg-8">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <span class="fw-semibold">Select all Items</span>
-            <input type="checkbox" id="selectAll" class="form-check-input custom-radio">
-          </div>
+  <div class="container">
+    <div class="row g-4">
+      
+      <!-- Left: items -->
+      <div class="col-lg-8" id="cartList">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="fw-semibold">Select all Items</span>
+          <input type="checkbox" id="selectAll" class="form-check-input custom-radio">
+        </div>
 
-          <!-- Item 1 -->
-          <div class="card mb-3 cart-item" data-price="33.99">
-            <div class="card-body d-flex align-items-center justify-content-between">
-              <div class="d-flex align-items-center">
-                <img src="images/Frame 1 .png" class="course-img me-3" alt="Course">
-                <div>
-                  <h6 class="item-title mb-1">Motion Graphics: Create a Nice Typography Animation</h6>
-                  <p class="item-price mb-0">$33.99</p>
-                </div>
-              </div>
-              <div class="d-flex flex-column align-items-end">
-                <input type="checkbox" class="form-check-input custom-radio mb-2 item-check" checked>
-                <button class="btn btn-outline-danger btn-sm remove-btn">Remove</button>
+        <!-- Template Item -->
+        <div class="card mb-3 cart-item" data-price="33.99">
+          <div class="card-body d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <img src="images/Frame 1 .png" class="course-img me-3" alt="Course">
+              <div>
+                <h6 class="item-title mb-1">Motion Graphics: Create a Nice Typography Animation</h6>
+                <p class="item-price mb-0">$33.99</p>
               </div>
             </div>
-          </div>
-
-          <!-- Item 2 -->
-          <div class="card mb-3 cart-item" data-price="33.99">
-            <div class="card-body d-flex align-items-center justify-content-between">
-              <div class="d-flex align-items-center">
-                <img src="images/Frame 1 .png" class="course-img me-3" alt="Course">
-                <div>
-                  <h6 class="item-title mb-1">Motion Graphics: Create a Nice Typography Animation</h6>
-                  <p class="item-price mb-0">$33.99</p>
-                </div>
-              </div>
-              <div class="d-flex flex-column align-items-end">
-                <input type="checkbox" class="form-check-input custom-radio mb-2 item-check" checked>
-                <button class="btn btn-outline-danger btn-sm remove-btn">Remove</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 3 -->
-          <div class="card mb-3 cart-item" data-price="33.99">
-            <div class="card-body d-flex align-items-center justify-content-between">
-              <div class="d-flex align-items-center">
-                <img src="images/Frame 1 .png" class="course-img me-3" alt="Course">
-                <div>
-                  <h6 class="item-title mb-1">Motion Graphics: Create a Nice Typography Animation</h6>
-                  <p class="item-price mb-0">$33.99</p>
-                </div>
-              </div>
-              <div class="d-flex flex-column align-items-end">
-                <input type="checkbox" class="form-check-input custom-radio mb-2 item-check" checked>
-                <button class="btn btn-outline-danger btn-sm remove-btn">Remove</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 4 -->
-          <div class="card mb-3 cart-item" data-price="33.99">
-            <div class="card-body d-flex align-items-center justify-content-between">
-              <div class="d-flex align-items-center">
-                <img src="images/Frame 1 .png" class="course-img me-3" alt="Course">
-                <div>
-                  <h6 class="item-title mb-1">Motion Graphics: Create a Nice Typography Animation</h6>
-                  <p class="item-price mb-0">$33.99</p>
-                </div>
-              </div>
-              <div class="d-flex flex-column align-items-end">
-                <input type="checkbox" class="form-check-input custom-radio mb-2 item-check" checked>
-                <button class="btn btn-outline-danger btn-sm remove-btn">Remove</button>
-              </div>
+            <div class="d-flex flex-column align-items-end">
+              <input type="checkbox" class="custom-radio item-check">
+              <button class="btn btn-outline-danger btn-sm remove-btn">Remove</button>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <!-- Right: summary -->
+      <div class="col-lg-4">
+        <div class="cart-summary">
+          <h3 class="summary-title">CART SUMMARY</h3>
+          <div class="summary-details">
+            <p class="summary-item"><span>Items Total</span><span>$67.98</span></p>
+            <p class="summary-item"><span>Items Discount</span><span>$0</span></p>
 
-<!-- Cart Summary -->
-<div class="cart-summary">
-  <h3 class="summary-title">CART SUMMARY</h3>
+            <!-- Voucher -->
+            <div class="voucher-row">
+              <div style="flex:1;">
+                <input type="text" id="voucher" class="voucher-input" placeholder="Enter Voucher Code">
+              </div>
+              <button class="btn-apply">APPLY</button>
+            </div>
 
-  <div class="summary-details">
-    <p class="summary-item">
-      <span>Items Total</span>
-      <span>$67.98</span>
-    </p>
-    <p class="summary-item">
-      <span>Items Discount</span>
-      <span>$0</span>
-    </p>
+            <p class="summary-item"><span>Sub Total</span><span>$67.98</span></p>
+            <div class="summary-divider"></div>
+            <p class="summary-item total"><span>Total</span><span>$67.98</span></p>
+          </div>
 
-    <!-- Voucher Row -->
-    <div class="voucher-row">
-  <div style="flex:1;">
-    
-    <input type="text" id="voucher" class="voucher-input" placeholder="Enter Voucher Code">
-  </div>
-  <button class="btn-apply">APPLY</button>
-</div>
+          <!-- Buttons -->
+          <div class="summary-buttons-row">
+            <button class="btn-add-course">Add Courses <span class="plus-circle">+</span></button>
+            <button class="btn-empty">Empty Cart</button>
+          </div>
 
-    <p class="summary-item">
-      <span>Sub Total</span>
-      <span>$67.98</span>
-    </p>
-
-    <div class="summary-divider"></div>
-
-
-    <p class="summary-item total">
-      <span>Total</span>
-      <span>$67.98</span>
-    </p>
-  </div>
-
-  <!-- Buttons Row -->
-  <div class="summary-buttons-row">
-    <button class="btn-add-course">
-      Add Courses <span class="plus-circle">+</span>
-    </button>
-    <button class="btn-empty">Empty Cart</button>
-  </div>
-
-  <!-- Checkout Button -->
-  <div class="summary-checkout">
-    <button class="btn-checkout">Check Out</button>
-  </div>
-</div>
-
+          <div class="summary-checkout">
+            <button class="btn-checkout">Check Out</button>
+          </div>
+        </div>
       </div>
     </div>
-  </main>
+  </div>
+</main>
 
   <!-- Payment Modal -->
   <div class="modal fade" id="paymentModal" tabindex="-1" aria-hidden="true">
