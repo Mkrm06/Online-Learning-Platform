@@ -56,6 +56,16 @@ document.addEventListener("DOMContentLoaded", () => {
       video.play();
     }
   });
+  // Click handler for lessons
+document.querySelectorAll(".lesson-item").forEach(item => {
+  item.addEventListener("click", function() {
+    document.querySelectorAll(".lesson-item").forEach(el => el.classList.remove("active"));
+    this.classList.add("active");
+    console.log("Playing video:", this.dataset.src);
+    // you can load video player here with this.dataset.src
+  });
+});
+
 
   // Notes (save in localStorage)
   notesBox.value = localStorage.getItem("courseNotes") || "";
