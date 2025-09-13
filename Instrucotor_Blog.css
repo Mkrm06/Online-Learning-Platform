@@ -77,39 +77,114 @@ a {
     margin: 10px 0;
   }
 }
-
-/* Hero Section */
 .hero {
-  height: 80vh;
-  background: linear-gradient(rgba(63, 38, 160, 0.8), rgba(63, 38, 160, 0.8)),
-              url('https://source.unsplash.com/1600x900/?coding,computer') center/cover no-repeat;
+  height: 70vh; /* full screen height */
+  background: url("Image/Header_Blog.png") no-repeat center center;
+  background-size: cover; /* make image cover */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
 }
 
-.hero h1 {
-  font-size: 2.8rem;
+/* dark overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(72, 35, 132, 0.6); /* purple overlay */
+  z-index: 1;
 }
 
-.hero p {
-  max-width: 600px;
+.hero .container {
+  position: relative;
+  z-index: 2; /* bring text above overlay */
 }
 
-/* Blog Card */
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* smaller heading on mobile */
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 1rem; /* smaller paragraph */
+  }
+}
+
+@media (min-width: 769px) {
+  .hero h1 {
+    font-size: 3rem; /* desktop heading size */
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+
+.blog-section h3 {
+  font-size: 1.8rem;
+}
+
 .blog-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: none;
   border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
 .blog-card img {
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  width: 100%;
+  height: auto;   /* keeps full image */
+  object-fit: contain; /* fit inside without cropping */
 }
+
+
+
+.blog-card h6 {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.blog-section h3 {
+  font-size: 1.8rem;
+}
+
+.blog-section span {
+  font-size: 0.95rem;
+  color: #6c757d; /* muted gray */
+}
+
+
+/* Gradient button style */
+.btn-gradient {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+  padding: 10px 30px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: 0.3s;
+  border: none;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(90deg, #2575fc, #6a11cb);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 
 .footer-section {
   background: linear-gradient(90deg, #331DAB, #865AEF);
