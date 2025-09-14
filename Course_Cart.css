@@ -29,54 +29,79 @@ body{
   color:#4664ff;
 }
 
-  /* Nav Bar Styling */
-.search-bar {
-    width: 350px;
-  }
-  .btn-gradient {
-    background: linear-gradient(90deg, #004eeb, #7b2ff7);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 8px 20px;
-  }
-  .btn-gradient:hover {
-    opacity: 0.9;
-  }
-  .navbar-nav .nav-link.active {
-    color: #004eeb !important;
-    font-weight: 600;
-  }
-  @media (max-width: 991px) {
-    .search-bar {
-      width: 100%;
-      margin: 10px 0;
-    }
-  }
+/* Navbar items */
+.navbar-nav {
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  color: #333;
+}
+
+/* Default menu links */
+.navbar-nav .nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333 !important;  /* all black */
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover and dropdown open = blue */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.show {
+  color: #004eeb !important;
+}
+
+
+/* Profile Icon Circle */
+.profile-icon {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.profile-icon:hover {
+  border-color: #004eeb;
+  color: #004eeb;
+}
 
 /* Hero */
 .hero-section{
   background: linear-gradient(90deg, var(--brand-start), var(--brand-end));
   color:#fff;
-  padding:64px 0;
-  border-bottom-left-radius:30px;
-  border-bottom-right-radius:30px;
+  padding:50px 0;
+  border-bottom-left-radius:0px;
+  border-bottom-right-radius:0px;
 }
 .hero-section h1{
   font-size:42px;
 }
 .hero-img img{
-  width:480px;
+  width:400px;
   max-width:100%;
   height:auto;
 }
 
 /* Cart items */
-.cart-item{
-  background:var(--grey-card);
-  border:none;
-  border-radius:12px;
+.cart-item .custom-radio {
+  margin: 0 0 5px 0; /* small gap below radio */
 }
+.remove-btn {
+  font-size: 14px;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
 .course-img{
   width:110px;
   height:80px;
@@ -428,3 +453,29 @@ body {
   background-color: #050472; /* Blue background on hover */
   color: #fff; /* White text on hover */
 }
+.select-all {
+  width: 100%;
+}
+
+.select-all span {
+  font-weight: 600;
+}
+
+.select-all .custom-radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50% !important;
+  border: 2px solid #050472;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: 0.3s;
+  vertical-align: middle;
+}
+
+.select-all .custom-radio:checked {
+  background-color: #050472;
+  border-color: #050472;
+}
+

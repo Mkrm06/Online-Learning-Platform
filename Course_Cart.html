@@ -22,20 +22,21 @@
   <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2">
   <div class="container-fluid">
 
+    <!-- Logo -->
     <a class="navbar-brand fw-bold" href="#">
-      <img src="images/2 717 (1).png" alt="Logo" height="80">
+      <img src="images/2 717 (1).png" alt="Logo" height="60">
     </a>
 
-    
+    <!-- Mobile toggle -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-      <!-- Nav items -->
+    <!-- Nav + Icons -->
     <div class="collapse navbar-collapse" id="navbarContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-        <!-- Home -->
+      <!-- Center menu -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Home</a>
           <ul class="dropdown-menu">
@@ -43,8 +44,6 @@
             <li><a class="dropdown-item" href="#">Home 2</a></li>
           </ul>
         </li>
-
-        <!-- Courses -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Courses</a>
           <ul class="dropdown-menu">
@@ -52,8 +51,6 @@
             <li><a class="dropdown-item" href="#">UI/UX Design</a></li>
           </ul>
         </li>
-
-        <!-- Shop -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Shop</a>
           <ul class="dropdown-menu">
@@ -61,8 +58,6 @@
             <li><a class="dropdown-item" href="#">Cart</a></li>
           </ul>
         </li>
-
-        <!-- Pages -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Pages</a>
           <ul class="dropdown-menu">
@@ -72,22 +67,21 @@
         </li>
       </ul>
 
-      
-
-      <!-- Icons + Buttons -->
+      <!-- Right-side icons -->
       <div class="d-flex align-items-center gap-3">
-        <a href="#" class="text-dark position-relative">
+        <a href="#" class="text-dark position-relative active">
           <i class="bi bi-cart fs-5"></i>
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">0</span>
         </a>
-        <a href="#" class="text-dark"><i class="bi bi-person fs-5"></i></a>
-       
-       
+
+        <a href="#" class="profile-icon d-flex align-items-center justify-content-center">
+          <i class="bi bi-person"></i>
+        </a>
       </div>
+
     </div>
   </div>
 </nav>
-
 
       
   </header>
@@ -113,9 +107,9 @@
       
       <!-- Left: items -->
       <div class="col-lg-8" id="cartList">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <span class="fw-semibold">Select all Items</span>
-          <input type="checkbox" id="selectAll" class="form-check-input custom-radio">
+        <div class="d-flex justify-content-end align-items-center mb-3 select-all">
+          <span class="fw-semibold me-2">Select all Items</span>
+            <input type="checkbox" id="selectAll" class="custom-radio">
         </div>
 
         <!-- Template Item -->
@@ -128,10 +122,11 @@
                 <p class="item-price mb-0">$33.99</p>
               </div>
             </div>
-            <div class="d-flex flex-column align-items-end">
-              <input type="checkbox" class="custom-radio item-check">
-              <button class="btn btn-outline-danger btn-sm remove-btn">Remove</button>
-            </div>
+            <div class="d-flex flex-column align-items-end justify-content-between gap-2">
+  <input type="checkbox" class="custom-radio item-check">
+  <button class="btn btn-outline-danger btn-sm remove-btn">Remove</button>
+</div>
+
           </div>
         </div>
       </div>
